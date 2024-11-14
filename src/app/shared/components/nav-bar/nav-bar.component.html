@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg " dir="rtl">
+    <span> <img src="assets\logo.png" alt="" width="80px" height="50px" class="mr-3"></span>
+
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="pi pi-list"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" style="padding:15px 80px ;" id="navbarSupportedContent">
+        <ul class="navbar-nav  justify-content-center d-flex " style="width: 100%;"
+            *ngFor="let item of items; let i = index">
+
+            <li class="nav-item" (click)="onTap(i)">
+                <a [class]="selectedTab==i?'active rounded':''"
+                 [routerLinkActiveOptions]="{exact:true}" [routerLink]="[item.routerLink]">
+                {{item.lable}}</a>
+            </li>
+        </ul>
+    </div>
+    <form class=" d-flex  my-2  my-lg-0" style="color: rgb(173, 173, 173);">
+        <p class="ml-3 pt-3">
+            <i class="pi pi-user"></i>
+            حسابي
+        </p>
+        <p class="pt-3">
+            <i class="pi pi-shopping-cart"></i>
+            طلباتي
+        </p>
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+    </form>
+</nav>

@@ -1,0 +1,37 @@
+<div class="body d-flex justify-content-center align-items-center" dir="rtl">
+    <p-card class="login align-items-end">
+        <div class=" d-block text-right"
+        >
+            <img src="assets/logo.png" width="120px" alt="Logo" >
+            <p>تسجيل الدخول</p>
+        </div>
+        <div class="flex flex-column gap-2  d-block text-right">
+            <label for="email" class="d-block">البريد الأكتروني</label>
+            <input pInputText id="Email" />
+
+        </div>
+
+        <div class="flex flex-column gap-2 mt-4 ">
+            <div class="row justify-content-between px-3">
+                <label for="password">كلمة المرور</label>
+                <a href="#"
+                    style="font-size: 1rem; color: rgba(128, 128, 128, 0.634); text-decoration: underline;">نسيت كلمة المرور؟</a>
+            </div>
+            <div class="row m-0 p-0 w-100  ">
+                <div class="col p-0 m-0 w-100">
+                    <input pInputText id="password" [type]="showPassword?'text':'password'" />
+                </div>
+                <button class="p-2 rounded mr-1 " style="background-color: white;" (click)="onTogglePassword()">
+                    <i [class]="showPassword?'pi pi-eye-slash m-1':'pi pi-eye m-1'" style="color: grey"></i>
+                </button>
+            </div>
+
+        </div>
+        <div class="justify-content-center d-flex  p-0" style="margin: 55px 0px 30px 0px; ">
+            <button pButton pRipple label="تسجيل الدخول" (click)="goToHome()"
+                style="border-radius: 10px; width: 100%; border:1px solid #A20C0D; background: #A20C0D; margin:0px 25px;">
+            </button>
+        </div>
+    </p-card>
+
+</div>

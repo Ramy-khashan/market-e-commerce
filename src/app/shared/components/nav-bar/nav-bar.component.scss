@@ -1,0 +1,26 @@
+.nav-item {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+a {
+    color: #979797; 
+}
+
+a:hover {
+    color: #A20C0D;
+    text-decoration: underline #A20C0D; 
+
+}
+
+a.active {
+    color: #A20C0D;
+    text-decoration: underline #A20C0D;
+ 
+}
+p{
+    cursor: pointer;
+}
+.nav-item{
+    color: #979797;
+}

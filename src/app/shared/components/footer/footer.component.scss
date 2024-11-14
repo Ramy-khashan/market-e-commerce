@@ -1,0 +1,22 @@
+.body {
+    padding: 30px 15px;
+    background: #A20C0D;
+    color: white;
+    text-align: start;
+}
+
+a {
+    display: block;
+    color: rgb(226, 225, 225);
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.col-md-2 {
+    margin-top: 25px;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline white;
+}

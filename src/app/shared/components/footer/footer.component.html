@@ -1,0 +1,21 @@
+
+<div class="body row m-0" dir="rtl">
+<div class="col-md-2" style="width: 180px;" ><img src="assets/logo.png" width="180px" alt="Logo Image"></div>
+<div class="col-md-2" >
+<a href="" [routerLink]="[item.routerLink]" *ngFor="let item of serviceItems">
+    {{item.lable}}
+</a>
+</div>
+<div class="col-md-2" >
+    <a href="" [routerLink]="[item.routerLink]" *ngFor="let item of aboutUsItems">
+        {{item.lable}}
+    </a>
+</div>
+<div class="col-md-2" >
+    <a href="" [routerLink]="[item.routerLink]" *ngFor="let item of tearmsItems">
+        {{item.lable}}
+    </a></div>
+    <div class="col-md-2" >
+        <img src="assets/payment-social.png" width="250px" alt="">
+    </div>
+</div>

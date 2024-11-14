@@ -1,0 +1,66 @@
+<div class="about-us mx-3">
+    
+<p style="color: #A20C0D; font-size: 22px;">من نحن</p>
+
+<p style="color: black; font-size: 22px;">تهتم مطاعم شطة وليمون بإعداد الأكل الشعبي الأصيل والاهتمام بكامل التفاصيل والجودة المقدمة</p>
+<p style="color: #979797; font-size: 17px;">احد اشهر مطاعم المأكولات في المملكة العربية السعودية حيث تقوم أيضا مطاعم شطة وليمون بتطوير مستوى الأكل الشعبي الأصيل في مكان يجمع بين الطعم الأصيل والخدمة المقدمة وتطمح مطاعم شطة وليمون بالوصول الى العالي المستويات في مجال المطاعم على المستوى المحلى والعالمي وذلك لننا نقوم بتقديم أجود المواد الطازجة</p>
+</div>
+<p>
+    قائمة وجباتنا</p>
+<mat-grid-list [cols]="menu" rowHeight="220px"  class="pt-3">
+    <mat-grid-tile *ngFor="let item of menus; let i=index" >
+        <mat-card class="align-items-center  py-3  mb-5 mt-3 h-70 menu-card" appearance="outlined">
+            <img [src]="item.image" alt="" width="80px" height="80px">
+            <span class=" my-1 " style=" font-size: 16px;"> {{item.title}}</span>
+            <span class="  mt-2" style=" color: #979797; font-size: 12px;">{{item.subTitle}}</span>
+            
+             
+        </mat-card>
+        
+    </mat-grid-tile>
+</mat-grid-list>
+<p>
+    مقترحة لك</p>
+<mat-grid-list [cols]="gridCols" rowHeight="350px">
+    <mat-grid-tile *ngFor="let product of dailyOffers; let i=index">
+        <div [class]="gridCols===2?'mob':'web'" (click)="onTapProduct()">
+            <app-product-shape></app-product-shape>
+
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+<p>
+    الأقسام
+</p>
+<mat-grid-list [cols]="partitions" rowHeight="250px">
+    <mat-grid-tile class="m-0" *ngFor="let product of partitionsItems; let i=index">
+        <div class="partitions m-0 p-0 text-center" (click)="onTapProduct()">
+            <!-- <app-product-shape></app-product-shape> -->
+            <img src="assets/partitions.png" alt="" width="90%">
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<p>
+    الأكثر مبيعا
+</p>
+<mat-grid-list [cols]="gridCols" rowHeight="350px">
+    <mat-grid-tile *ngFor="let product of dailyOffers; let i=index">
+        <div [class]="gridCols===2?'mob':'web'" (click)="onTapProduct()">
+            <app-product-shape></app-product-shape>
+
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+<p>
+    الأكثر مبيعا
+</p>
+<mat-grid-list [cols]="gridCols" rowHeight="350px">
+    <mat-grid-tile *ngFor="let product of dailyOffers; let i=index">
+        <div [class]="gridCols===2?'mob':'web'" (click)="onTapProduct()">
+            <app-product-shape></app-product-shape>
+
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
