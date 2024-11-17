@@ -18,7 +18,7 @@ import { CardModule } from 'primeng/card';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    CardModule
+    CardModule,
 
   ],
   providers: [],

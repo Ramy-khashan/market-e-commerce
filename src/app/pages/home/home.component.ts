@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-
+ 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+ 
 })
 export class HomeComponent implements OnInit {
   mostSales: any[] | undefined;
@@ -209,22 +210,22 @@ this.menus= [
     id: 5
   },
 ]
-    this.breakpointObserver.observe([Breakpoints.Web, Breakpoints.Large, Breakpoints.TabletLandscape])
-      .subscribe(result => {
-        if (result.matches) {
-          this.gridCols = 4;
-          this.partitions = 3;
-          this.menu=this.menus.length;
+this.breakpointObserver.observe([Breakpoints.Web, Breakpoints.Large, Breakpoints.TabletLandscape])
+.subscribe(result => {
+  if (result.matches) {
+    this.gridCols = 4;
+    this.partitions = 3;
+    this.menu=this.menus.length;
 
-        } else {
-          this.gridCols = 2;
-          this.partitions = 1;
-          this.menu=2;
+  } else {
+    this.gridCols = 2;
+    this.partitions = 1;
+    this.menu=2;
 
 
-        }
-        // 1 column on mobile, 4 on larger screens
-      });
+  }
+  // 1 column on mobile, 4 on larger screens
+});
   }
 
 }

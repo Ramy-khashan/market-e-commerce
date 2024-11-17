@@ -1,1 +1,15 @@
-<p>our-meals works!</p>
+<div class="parent">
+    <img src="assets/meals.png" alt="meal image">
+    <p class="title">قائمة وجباتنا</p>
+</div>
+<div class="mb-5" *ngFor="let head of mealsHeader">
+
+    <app-header [title]="head"></app-header>
+    <mat-grid-list [cols]="gridCols" rowHeight="350px">
+        <mat-grid-tile *ngFor="let product of products; let i=index">
+            <div [class]="gridCols===2?'mob':'web'" (click)="onTapProduct()">
+                <app-product-shape></app-product-shape>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

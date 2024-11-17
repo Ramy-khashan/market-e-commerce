@@ -1,0 +1,37 @@
+<div class="m-5" dir="rtl">
+    <div class="row">
+        <div class="col-md-6">
+            <mat-card class="align-items-center">
+                <img src="assets/food.png" alt="">
+            </mat-card>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-10">
+                    <p class="title">برغر لحم مشوي مع جبن</p>
+                    <p class="desc">استمتع بتجربة البرغر اللذيذ المحضر من لحم مشوي طازج مع جبن شيدر ذائب، شرائح الطماطم،
+                        خس مقرمش وصوص باربكيو المميز. يقدم مع خبز طازج محمص بعناية</p>
+                </div>
+                <div class="col-md-2 ">
+                    <button class="add-favorite"><i class="pi pi-heart" style="color: green;"></i></button>
+                </div>
+            </div>
+            <p style="font-weight: 800;">المكونات</p>
+            <ul style="color: grey;">
+                <li *ngFor="let component of items">
+                    <p>{{component}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="head">مقترحة لك</p>
+    <mat-grid-list [cols]="gridCols" rowHeight="350px">
+        <mat-grid-tile *ngFor="let product of products; let i=index">
+            <div style="width: 90%;" (click)="onTapProduct()">
+                <app-product-shape></app-product-shape>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+</div>

@@ -15,7 +15,7 @@ export class NavBarComponent implements OnInit {
     this.items = [
       { lable: 'الصفحة الرئيسية', routerLink: '/market/pages/home' },
       { lable: 'ملاحظات', routerLink: '/market/pages/notes' },
-      { lable: 'التوظيف', routerLink: '/market/pages/categories' },
+      { lable: 'التوظيف', routerLink: '/market/pages/hiring' },
       { lable: 'وجباتنا', routerLink: '/market/pages/our-meals' },
     ];
   }

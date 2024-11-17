@@ -1,1 +1,24 @@
-<p>hiring works!</p>
+<div dir="rtl">
+    <div class="parent">
+        <img src="assets/meals.png" alt="meal image">
+        <p class="title">التوظيف</p>
+    </div>
+    <div class="m-5">
+        <div class="intro">
+            <p style="color: #A20C0D;">انضم الى فريقنا </p>
+            <p>نحن في [شطة وليمون ] نبحث دائمًا عن أفراد شغوفين وموهوبين للانضمام إلى فريقنا. إذا كنت ترغب في العمل في
+                بيئة
+                ديناميكية وتطوير مهاراتك، فنحن نرحب بك للانضمام إلينا.</p>
+        </div>
+        <p class="head">الوظائف المتاحة</p>
+        <mat-grid-list [cols]="gridCols" rowHeight="250px" >
+            <mat-grid-tile *ngFor="let hireItem of hiringItems; let i=index" >
+                <div class="item" (click)="onTapProduct()">
+                    <app-hire-shape [hireItem]="hireItem"></app-hire-shape>
+
+        
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+     </div>
+</div>

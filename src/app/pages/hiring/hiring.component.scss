@@ -1,0 +1,45 @@
+.title {
+    font-family: IBM Plex Sans Arabic;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 84px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 50X;
+    top: 40%;
+}
+.item{
+    width: 900%;
+}
+.parent {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+}
+
+.intro {
+
+    text-align: start;
+
+}
+
+.head {
+    font-family: IBM Plex Sans Arabic;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: 0.015em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #A20C0D;
+    text-decoration: underline;
+    text-align: start;
+    margin-top: 40px;
+}

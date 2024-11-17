@@ -11,9 +11,9 @@
             *ngFor="let item of items; let i = index">
 
             <li class="nav-item" (click)="onTap(i)">
-                <a [class]="selectedTab==i?'active rounded':''"
-                 [routerLinkActiveOptions]="{exact:true}" [routerLink]="[item.routerLink]">
-                {{item.lable}}</a>
+                <a [class]="selectedTab===i?'active rounded':''" [routerLinkActiveOptions]="{exact:true}"
+                    [routerLink]="[item.routerLink]">
+                    {{item.lable}}</a>
             </li>
         </ul>
     </div>

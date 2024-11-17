@@ -1,0 +1,52 @@
+.web {
+    width: 90%;
+}
+
+.mob {
+    width: 90%;
+}
+
+p {
+    font-family: IBM Plex Sans Arabic;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    text-align: center;
+    color: #A20C0D;
+
+}
+
+.partitions {
+    width: 100%;
+    margin: 0px;
+}
+
+.menu-card {
+    width: 80%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 4px rgb(194, 193, 193);
+    margin: 10px;
+}
+
+.title {
+    font-family: IBM Plex Sans Arabic;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 84px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 50X;
+    top: 40%;
+}
+
+.parent {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+}

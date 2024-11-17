@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-our-meals',
-  templateUrl: './our-meals.component.html',
-  styleUrls: ['./our-meals.component.scss'],
+  selector: 'app-product-details',
+  templateUrl: './product-details.component.html',
+  styleUrls: ['./product-details.component.scss']
 })
-export class OurMealsComponent implements OnInit {
-  mealsHeader: any[] | undefined;
+export class ProductDetailsComponent implements OnInit {
   gridCols = 4
   products: any[] | undefined;
+  items: any[] | undefined;
 
   constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
 
@@ -28,13 +28,17 @@ export class OurMealsComponent implements OnInit {
       });
   }
   ngOnInit(): void {
-    this.mealsHeader = [
-      'ساندويتشات ',
-      'الوجبات',
-      'المشروبات',
-      'المقبلات',
-      'العروض',
-    ];
+    this.items = [
+      "خبز محمص بالسمسم",
+      "لحم بقري مشوي",
+      "جبن شيدر",
+      "خس طازج",
+      "شرائح طماطم",
+      "مخلل",
+      "بصل",
+      "صوص باربكيو",
+      "كاتشب",
+    ]
     this.products = [
       {
         id: "21",

@@ -7,51 +7,74 @@ import { GallaryComponent } from './gallary/gallary.component';
 import { HiringComponent } from './hiring/hiring.component';
 import { NotesComponent } from './notes/notes.component';
 import { OurMealsComponent } from './our-meals/our-meals.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {
-    path: "our-meals",
-    component: OurMealsComponent,
-    children:[]
-
-  }, {
+    data: {
+      title: 'Page',
+    },
     path: "home",
     component: HomeComponent,
-
-
-    children:[]
+    children: []
 
   }, {
+    data: {
+      title: 'Page',
+    },
+    path: "product-details",
+    component: ProductDetailsComponent,
+    children: []
+
+  }, {
+    data: {
+      title: 'Page',
+    },
     path: "products",
     component: ProductsComponent,
-    children:[]
+    children: []
 
   },
   {
+    data: {
+      title: 'Page',
+    },
     path: "gallary",
     component: GallaryComponent,
-    children:[]
+    children: []
 
   }, {
+    data: {
+      title: 'Page',
+    },
     path: "hiring",
     component: HiringComponent
-  ,
-  children:[]
+    ,
+    children: []
 
   }, {
+    data: {
+      title: 'Page',
+    },
     path: "notes",
     component: NotesComponent
-    ,children:[]
+    , children: []
     ,
   }, {
+    data: {
+      title: 'Page',
+    },
     path: "our-meals",
     component: OurMealsComponent,
-    children:[]
+    children: []
 
   }, {
+    data: {
+      title: 'Page',
+    },
     path: "branches",
     component: BranchesComponent,
-    children:[]
+    children: []
   },
 ];
 

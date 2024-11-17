@@ -24,7 +24,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     MatCardModule,
     MatIconModule,
-    ButtonModule  
+    ButtonModule  ,
+    RouterModule
   ],
   exports: [
     NavBarComponent,
