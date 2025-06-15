@@ -1,6 +1,9 @@
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ResponsiveEnum } from 'src/app/shared/enum/responsive-enum';
+import { ResponsiveService } from 'src/app/shared/services/responsive.service';
 
 @Component({
   selector: 'app-product-details',
@@ -12,22 +15,13 @@ export class ProductDetailsComponent implements OnInit {
   products: any[] | undefined;
   items: any[] | undefined;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
-
-    this.breakpointObserver.observe([Breakpoints.Web, Breakpoints.Large, Breakpoints.TabletLandscape])
-      .subscribe(result => {
-        if (result.matches) {
-          this.gridCols = 4;
-
-        } else {
-          this.gridCols = 2;
-
-
-        }
-        // 1 column on mobile, 4 on larger screens
-      });
-  }
+  constructor(private responsive: ResponsiveService, private router: Router) { }
+  currentScreenSize$: Observable<ResponsiveEnum>;
   ngOnInit(): void {
+    this.currentScreenSize$ = this.responsive.currentScreenSize$;
+    this.currentScreenSize$.subscribe(size =>
+      this.gridCols = size == ResponsiveEnum.Large ? 4 : size == ResponsiveEnum.Medium ? 2 : 1
+    );
     this.items = [
       "خبز محمص بالسمسم",
       "لحم بقري مشوي",
@@ -93,4 +87,21 @@ export class ProductDetailsComponent implements OnInit {
   onTapProduct() {
     this.router.navigate(['market/pages/product-details']);
   }
+  quantity: number = 1;
+  increaseQuantity() {
+    this.quantity++;
+  }
+  decreaseQunatity() {
+    if (this.quantity > 1) {
+      this.quantity--
+    }
+  }
+  addionsItems: any[] = [
+    'كاتشب',
+    'مايونيز',
+    'بطاطس',
+    'هلبينو',
+    'صوص رانش',
+
+  ]
 }

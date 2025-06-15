@@ -2,7 +2,9 @@
     <div class="row">
         <div class="col-md-6">
             <mat-card class="align-items-center">
-                <img src="assets/food.png" alt="">
+                <div style="height:500px;" class="align-items-center w-100 d-flex justify-content-center">
+                    <img src="assets/food.png" alt="Product-image">
+                </div>
             </mat-card>
         </div>
         <div class="col-md-6">
@@ -16,12 +18,46 @@
                     <button class="add-favorite"><i class="pi pi-heart" style="color: green;"></i></button>
                 </div>
             </div>
-            <p style="font-weight: 800;">المكونات</p>
+            <p style="font-weight: 800; font-size: 20px;">المكونات</p>
             <ul style="color: grey;">
                 <li *ngFor="let component of items">
                     <p>{{component}}</p>
                 </li>
             </ul>
+            <p style="font-weight: 800; font-size: 20px;">الإضافات</p>
+            <mat-grid-list [cols]="gridCols" rowHeight="80px">
+                <mat-grid-tile *ngFor="let item of addionsItems">
+                    <div class="addition-item w-100 align-items-center  justify-content-start d-flex" >
+                        <input type="checkbox"> <span> {{item}}</span>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+            
+            <p style="font-weight: 800; font-size: 20px;">السعر
+                <span class="price" style="color:#A20C0D;"> 33ج.م
+                </span>
+            </p>
+            <div class="row m-0 d-flex justify-content-between ">
+                <p style="font-weight: 800; font-size: 20px;">الكمية</p>
+                <div class="q-control d-flex  text-align-center">
+                    <button (click)="increaseQuantity()"><i class="pi pi-plus"></i></button>
+                    <p class="p-0 mx-3 my-2">{{quantity}}</p>
+                    <button (click)="decreaseQunatity()"><i class="pi pi-minus"></i></button>
+                </div>
+            </div>
+            <div class="row m-0 d-flex buttons-action  my-3  ">
+                <div class="actions">
+                    <button pButton pRipple label="اطلب الآن">
+                    </button>
+                </div>
+                <div class="add-to-cart mr-2">
+                    <button pButton pRipple label="أضف الى السلة">
+                    </button>
+                </div>
+
+            </div>
+
+
         </div>
     </div>
 

@@ -1,3 +1,7 @@
+<div class="parent">
+    <img src="assets/meals.png" alt="meal image">
+    <!-- <p class="title">قائمة وجباتنا</p> -->
+</div>
 <div class="about-us mx-3">
 
     <p style="color: #A20C0D; font-size: 22px;">من نحن</p>
@@ -13,19 +17,16 @@
     قائمة وجباتنا</p>
 <mat-grid-list [cols]="menu" rowHeight="220px" class="pt-3">
     <mat-grid-tile *ngFor="let item of menus; let i=index">
-        <mat-card class="align-items-center  py-3  mb-5 mt-3 h-70 menu-card" appearance="outlined">
+        <mat-card [class]="menu===2?'male-mob':'male-web ' ">
             <img [src]="item.image" alt="" width="80px" height="80px">
             <span class=" my-1 " style=" font-size: 16px;"> {{item.title}}</span>
             <span class="  mt-2" style=" color: #979797; font-size: 12px;">{{item.subTitle}}</span>
-
-
         </mat-card>
 
     </mat-grid-tile>
 </mat-grid-list>
 <p>
-    مقترحة لك</p>
-<mat-grid-list [cols]="gridCols" rowHeight="350px">
+    مقترحة لك</p><mat-grid-list [cols]="gridCols" rowHeight="350px">
     <mat-grid-tile *ngFor="let product of dailyOffers; let i=index">
         <div [class]="gridCols===2?'mob':'web'" (click)="onTapProduct()">
             <app-product-shape></app-product-shape>

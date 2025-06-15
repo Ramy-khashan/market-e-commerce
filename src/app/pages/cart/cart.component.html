@@ -1,0 +1,14 @@
+<div dir="rtl" class="m-3">
+    <app-cart-item-shape *ngFor="let item of cartItems; let i=index" [item]="item"></app-cart-item-shape>
+    <div class="row">
+        <mat-card class="p-5">
+            <p>السعر الكلي للمنتجات : 1000.53 L.E</p>
+            <p class="p-0 m-0">التوصيل : 1000.53 L.E</p>
+            <hr style="width:100%;text-align:left;margin-bottom:10 px ">
+            <p>السعر الكلي : <span style="color: green;font-weight: bold;">2000.53 L.E</span></p>
+            <button pButton pRipple label="Complete Order">
+
+            </button>
+        </mat-card>
+    </div>
+</div>

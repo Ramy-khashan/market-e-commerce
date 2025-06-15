@@ -1,0 +1,23 @@
+.gallary-img {
+    width: 100%;
+    margin: 20px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+
+.title {
+    font-family: IBM Plex Sans Arabic;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 84px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 50X;
+    top: 40%;
+}

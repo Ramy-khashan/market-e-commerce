@@ -1,0 +1,13 @@
+<div class="branch">
+    <p-card class="align-items-start  item px-4 py-3 mx-2" appearance="outlined">
+        <h6>
+            {{branch.branchName}}
+        </h6>
+        <p>العنوان:{{branch.address}}</p>
+        <p>ساعات العمل:{{branch.workingHours}}</p>
+        <p>الخدمات المتاحة:{{branch.availableServices}}</p>
+        <div class="loaction">
+                 <a [href]="onReturnLocation(branch.lat,branch.long)" target="_blank" rel="noopener noreferrer">الموقع على الخريطة</a>
+         </div>
+    </p-card>
+</div>

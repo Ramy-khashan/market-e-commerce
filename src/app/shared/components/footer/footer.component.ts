@@ -12,14 +12,14 @@ export class FooterComponent {
     { lable: 'قائمة وجباتنا', routerLink: '/market/pages/home' },
     { lable: 'اخر المستجدات', routerLink: '/market/pages/home' },
     { lable: 'الفعاليات', routerLink: '/market/pages/home' },
-    { lable: 'معرض الصور', routerLink: '/market/pages/home' },
+    { lable: 'معرض الصور', routerLink: '/market/pages/gallary' },
     { lable: 'تحميل قائمة الطعام', routerLink: '/market/pages/home' },
 
   ];
   aboutUsItems: NavBarModel[] = [
     { lable: 'من نحن', routerLink: '/market/pages/home' },
-    { lable: 'التوظيف', routerLink: '/market/pages/home' },
-    { lable: 'فروعنا', routerLink: '/market/pages/home' },
+    { lable: 'التوظيف', routerLink: '/market/pages/hiring' },
+    { lable: 'فروعنا', routerLink: '/market/pages/branches' },
     { lable: 'تواصل معنا', routerLink: '/market/pages/home' },
     { lable: 'مقالات', routerLink: '/market/pages/home' },
 

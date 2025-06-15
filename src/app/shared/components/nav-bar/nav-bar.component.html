@@ -19,12 +19,16 @@
     </div>
     <form class=" d-flex  my-2  my-lg-0" style="color: rgb(173, 173, 173);">
         <p class="ml-3 pt-3">
-            <i class="pi pi-user"></i>
-            حسابي
+            <a [routerLink]="'/market/pages/profile'">
+                <i class="pi pi-user"></i>
+                حسابي
+            </a>
         </p>
         <p class="pt-3">
-            <i class="pi pi-shopping-cart"></i>
-            طلباتي
+            <a [routerLink]="'/market/pages/cart'">
+                <i class="pi pi-shopping-cart"></i>
+                طلباتي
+            </a>
         </p>
         <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
     </form>

@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
- 
+import { ResponsiveEnum } from 'src/app/shared/enum/responsive-enum';
+import { ResponsiveService } from 'src/app/shared/services/responsive.service';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
- 
+
 })
 export class HomeComponent implements OnInit {
   mostSales: any[] | undefined;
@@ -15,8 +18,16 @@ export class HomeComponent implements OnInit {
   partitionsItems: any[] | undefined;
   menus: any[] | undefined;
 
+  currentScreenSize$: Observable<ResponsiveEnum>;
+  ngOnInit(): void {
+    this.currentScreenSize$ = this.responsive.currentScreenSize$;
+    this.currentScreenSize$.subscribe(size => {
+      this.gridCols = size == ResponsiveEnum.Large ? 4 : size == ResponsiveEnum.Medium ? 2 : 1;
+      this.menu = size == ResponsiveEnum.Large ? 4 : 2
 
-  ngOnInit() {
+    }
+    );
+
     this.mostSales = [
       {
         id: "21",
@@ -163,69 +174,59 @@ export class HomeComponent implements OnInit {
 
     ];
     this.partitionsItems = [
-    {
-      image:'assets/partitions.png',
-      id:2
-    },{
-      image:'assets/partitions.png',
-      id:2
-    },{
-      image:'assets/partitions.png',
-      id:2
-    },
-    ]  ;
+      {
+        image: 'assets/partitions.png',
+        id: 2
+      }, {
+        image: 'assets/partitions.png',
+        id: 2
+      }, {
+        image: 'assets/partitions.png',
+        id: 2
+      },
+    ];
 
-     
+
   }
   gridCols = 2;
   partitions = 3;
   menu = 4;
+  size: ResponsiveEnum;
+  constructor(private responsive: ResponsiveService, private router: Router) {
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
-this.menus= [
-  {
-    image: 'assets/menu.png',
-    title: "سندوتشات",
-    subTitle: "(12 صنف )",
-    id: 1
-  }, {
-    image: 'assets/menu.png',
-    title: "وجبات",
-    subTitle: "(12 صنف )",
-    id: 2
-  }, {
-    image: 'assets/menu.png',
-    title: "مشروبات",
-    subTitle: "(12 صنف )",
-    id: 3
-  }, {
-    image: 'assets/menu.png',
-    title: "مقبلات",
-    subTitle: "(12 صنف )",
-    id: 4
-  }, {
-    image: 'assets/menu.png',
-    title: "عروض",
-    subTitle: "(12 صنف )",
-    id: 5
-  },
-]
-this.breakpointObserver.observe([Breakpoints.Web, Breakpoints.Large, Breakpoints.TabletLandscape])
-.subscribe(result => {
-  if (result.matches) {
-    this.gridCols = 4;
-    this.partitions = 3;
-    this.menu=this.menus.length;
-
-  } else {
-    this.gridCols = 2;
-    this.partitions = 1;
-    this.menu=2;
+    this.menus = [
+      {
+        image: 'assets/menu.png',
+        title: "سندوتشات",
+        subTitle: "(12 صنف )",
+        id: 1
+      }, {
+        image: 'assets/menu.png',
+        title: "وجبات",
+        subTitle: "(12 صنف )",
+        id: 2
+      }, {
+        image: 'assets/menu.png',
+        title: "مشروبات",
+        subTitle: "(12 صنف )",
+        id: 3
+      }, {
+        image: 'assets/menu.png',
+        title: "مقبلات",
+        subTitle: "(12 صنف )",
+        id: 4
+      }, {
+        image: 'assets/menu.png',
+        title: "عروض",
+        subTitle: "(12 صنف )",
+        id: 5
+      },
+    ]
 
 
   }
-  // 1 column on mobile, 4 on larger screens
-});
-  }
+  onTapProduct() {
+    this.router.navigate(['market/pages/product-details']);
 
+  }
 }

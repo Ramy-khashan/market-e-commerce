@@ -1,1 +1,13 @@
-<p>gallary works!</p>
+<div class="parent">
+
+    <img src="assets/meals.png" alt="meal image"  >
+
+    <p class="title">معرض الصور</p>
+</div>
+<mat-grid-list [cols]="gridCols" rowHeight="350px">
+    <mat-grid-tile *ngFor="let image of gallaryImages; let i=index" class="m-0">
+
+        <img class='gallary-img' src="assets/{{image}}" alt="image name">
+
+    </mat-grid-tile>
+</mat-grid-list>

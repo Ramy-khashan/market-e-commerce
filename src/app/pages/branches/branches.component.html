@@ -1,1 +1,16 @@
-<p>branches works!</p>
+<div dir="rtl">
+    <div class="parent">
+        <img src="assets/meals.png" alt="meal image">
+        <p class="title">قائمة فروعنا </p>
+    </div>
+    
+    <mat-grid-list [cols]="gridCols" rowHeight="350px">
+        <mat-grid-tile *ngFor="let branch of branches; let i=index">
+            <div [class]="gridCols===2?'mob':'web'">
+                <!-- <app-product-shape></app-product-shape> -->
+                <app-branch-shape [branch]="branch"></app-branch-shape>
+    
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

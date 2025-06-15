@@ -1,0 +1,31 @@
+<mat-card class="m-3">
+    <div class="row m-0">
+
+        <img src="assets/food.png" height="100px" width="200px" style="object-fit: cover;" alt="">
+
+        <div class="col m-0 p-0   ">
+            <div class=" justify-content-between d-flex  m-3">
+                <p>
+                    title
+                </p>
+                <p>
+                    <button class="delete" (click)="onDelete()">
+                        <i class="pi pi-trash text-danger"></i>
+                    </button>
+                </p>
+            </div>
+            <div class="row align-items-center m-3 p-0 justify-content-between d-flex">
+                <div class="col-lg price">
+                    <p>Price: 155.50 L.E</p>
+                </div>
+                <div class="row mt-3 m-0">
+                    <button pButton pRipple class="button"><i class="pi pi-plus"></i></button>
+                    <p class="quantity">
+                        15
+                    </p>
+                    <button pButton pRipple class="button"><i class="pi pi-minus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card>

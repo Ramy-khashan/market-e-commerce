@@ -17,6 +17,10 @@ import { HireShapeComponent } from './hiring/components/hire-shape/hire-shape.co
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { BranchShapeComponent } from './branches/components/branch-shape/branch-shape.component';
+import { CartComponent } from './cart/cart.component';
+import { CartItemShapeComponent } from './cart/component/cart-item-shape/cart-item-shape.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -31,6 +35,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     OurMealsComponent,
     HireShapeComponent,
     ProductDetailsComponent,
+    BranchShapeComponent,
+    CartComponent,
+    CartItemShapeComponent,
+    ProfileComponent,
     
 
   ],

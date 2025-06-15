@@ -8,6 +8,8 @@ import { HiringComponent } from './hiring/hiring.component';
 import { NotesComponent } from './notes/notes.component';
 import { OurMealsComponent } from './our-meals/our-meals.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -74,6 +76,20 @@ const routes: Routes = [
     },
     path: "branches",
     component: BranchesComponent,
+    children: []
+  },{
+    data: {
+      title: 'Page',
+    },
+    path: "cart",
+    component: CartComponent,
+    children: []
+  },{
+    data: {
+      title: 'Page',
+    },
+    path: "profile",
+    component: ProfileComponent,
     children: []
   },
 ];
